@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شروط الاستخدام</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 3em; /* زيادة حجم العنوان */
+            margin-bottom: 30px; /* زيادة المسافة بين العنوان وبقية المحتوى */
+        }
+
+        #terms {
+            font-size: 1.2em; /* زيادة حجم النص */
+            margin-bottom: 40px; /* زيادة المسافة أسفل النص */
+            text-align: center; /* محاذاة النص لليمين */
+            overflow-y: auto;
+            max-height: 50vh;
+        }
+
+        ol {
+            padding-right: 20px; /* إضافة مسافة إضافية على اليمين لقائمة الشروط */
+        }
+
+        li {
+            margin-bottom: 20px; /* زيادة المسافة بين كل شرط وآخر */
+        }
+
+        button {
+            margin-top: 20px; /* إضافة مسافة أعلى الزر */
+            padding: 12px 24px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        label {
+            font-size: 1.2em;
+            margin-top: 20px; /* زيادة المسافة بين الـ checkbox والنص */
+            cursor: pointer;
+        }
+
+        .custom-checkbox {
+            position: relative;
+            display: inline-block;
+            width: 0px;
+            height: 0px;
+            margin-right: 0px;  /* تبعيد الـ checkbox عن النص */
+            visibility: hidden;  /* إخفاء الـ checkbox */
+        }
+
+        #submit-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 0px;  /* إضافة المسافة بين الزر والمحتوى السابق */
+        }
+
+        #submit-btn:hover {
+            background-color: #218838;
+        }
+
+        #submit-btn:disabled {
+            background-color: #6c757d;
+        }
+
+
+        #confirmation-msg {
+            margin-top: 30px;
+            font-size: 1.3em;
+            color: #28a745;
+        }
+
+        .custom-checkbox input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .custom-checkbox span {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #673737;
+            transition: 0.4s;
+            border-radius: 50px;
+        }
+
+        .custom-checkbox span:before {
+            content: "";
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            border-radius: 50px;
+            left: 4px;
+            bottom: 4px;
+            background-color: rgb(150, 76, 76);
+            transition: 0.4s;
+        }
+
+        .custom-checkbox input:checked + span {
+            background-color: #4CAF50;
+        }
+
+        .custom-checkbox input:checked + span:before {
+            transform: translateX(14px);
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h2>شروط الاستخدام</h2>
+    <div id="terms">
+        <ol>
+            <li>
+                <h3>عدم تحمل المسؤولية عن الاحتيال</h3><br>
+                نحن غير مسؤولين عن أي عمليات احتيال أو سوء استخدام للبوت من قبل الأطراف الأخرى، ويقع على عاتق المستخدم التحقق من موثوقية الأطراف التي يتعامل معها.
+            </li>
+            <li>
+                <h3>عدم المسؤولية أمام الشركات والألعاب</h3><br>
+                نحن لا نتحمل أي مسؤولية قانونية تجاه الشركات أو منصات الألعاب التي تمنع الشحن عبر طرف ثالث، ويقع على المشتري مسؤولية التأكد من سياسات اللعبة أو الخدمة قبل الاستخدام.
+            </li>
+            <li>
+                <h3>ملكية الكود المصدري وإمكانية الصيانة</h3><br>
+                يبقى الكود المصدري للبوت مملوكًا لنا، مما يتيح لنا القدرة على إجراء الصيانة والإصلاحات عند الحاجة، ولكن دون السماح للمشتري بالوصول إليه أو تعديله.
+            </li>
+            <li>
+                <h3>التزامنا بالصيانة والتشغيل</h3><br>
+                نحن مسؤولون عن صيانة البوت وإصلاح أي أخطاء قد تحدث، كما نلتزم بضمان تشغيله على مدار 24 ساعة لضمان استمرارية الخدمة.
+            </li>
+            <li>
+                <h3>عدم التعديل على الكود إلا بإذن من المشتري</h3><br>
+                لا يحق لنا التعديل أو الوصول إلى كود البوت الخاص بالمشتري بعد بيعه، إلا بموافقة واضحة منه، وذلك لضمان خصوصية المشتري وحماية بياناته.
+            </li>
+            <li>
+                <h3>عدم أحقية المشتري في طلب تعديلات</h3><br>
+                يتم بيع البوت كما هو، ولا يحق للمشتري المطالبة بتعديلات أو تخصيصات إضافية بعد الشراء، إلا في حالة وجود خطأ تقني يتطلب الإصلاح. ومع ذلك، يمكن للمشتري طلب تعديلات أو تخصيصات إضافية مقابل رسوم يتم الاتفاق عليها وفقًا لطبيعة التعديلات المطلوبة.
+            </li>
+            <li>
+                <h3>الإبقاء على زر شراء البوتات داخل البوت</h3><br>
+                يجب على المشتري إبقاء زر شراء البوتات مفعّلًا داخل البوت، ولا يحق له إزالته أو تعطيله.
+            </li>
+            <li>
+                <h3>عدم استخدام البوت لأغراض غير قانونية</h3><br>
+                يُحظر استخدام البوت في أي أنشطة غير قانونية أو احتيالية، مثل بيع أكواد مقرصنة أو مسروقة أو الاحتيال على الزبائن أو أي محتوى غير قانوني، ونحن غير مسؤولين عن أي استخدام مخالف للقوانين المحلية أو الدولية.
+            </li>
+            <li>
+                <h3>عدم إساءة استخدام الصيانة والدعم الفني</h3><br>
+                الصيانة مخصصة فقط لإصلاح الأخطاء التقنية المتعلقة بعمل البوت. لا تشمل الصيانة أي إضافات أو تعديلات خارج نطاق الوظائف الأصلية للبوت، ولا يحق للمشتري استغلال الصيانة لطلب تحسينات أو ميزات إضافية.
+            </li>
+            <li>
+                <h3>لا استرداد للأموال بعد البيع</h3><br>
+                بمجرد شراء البوت، لا يمكن للمشتري استرداد أمواله تحت أي ظرف، حيث يتم بيع المنتج كما هو دون ضمانات باسترجاع المبلغ.
+            </li>
+            <li>
+                <h3>تعديل شروط الاستخدام</h3><br>
+                نحتفظ بالحق في تعديل هذه الشروط في أي وقت، وسيتم إبلاغ المستخدمين بأي تغييرات هامة قد تؤثر على استخدامهم للبوت.
+            </li>
+        </ol>
+    </div>
+    
+    <form id="terms-form">
+        <button type="button" id="submit-btn" disabled>موافق</button>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="custom-checkbox">
+                <input type="checkbox" id="agree" required>
+                <span></span>
+            </div>
+            <label for="agree">أوافق على شروط الاستخدام</label>
+        </div>
+    </form>
+
+    <p id="confirmation-msg" style="display: none;">تمت الموافقة بنجاح!</p>
+</div>
+
+<script>
+    document.getElementById('agree').addEventListener('change', function() {
+        const submitButton = document.getElementById('submit-btn');
+        if (this.checked) {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    });
+
+    document.getElementById('submit-btn').addEventListener('click', function() {
+        if (document.getElementById('agree').checked) {
+            document.getElementById('submit-btn').disabled = true;
+
+            document.querySelector('label[for="agree"]').style.display = 'none';
+            document.querySelector('.custom-checkbox').style.display = 'none';
+
+            const userAgent = navigator.userAgent;
+            const language = navigator.language || navigator.userLanguage;
+            const currentTime = new Date().toISOString();
+
+            fetch('http://localhost:3000/save-info', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userAgent: userAgent,
+                    language: language,
+                    timestamp: currentTime
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("✅ تم تسجيل المعلومات:", data);
+                alert(data.message);
+                document.getElementById('confirmation-msg').style.display = 'block';
+            })
+            .catch(error => {
+                console.error("❌ حدث خطأ:", error);
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    document.getElementById('submit-btn').disabled = false;
+                }, 3000);
+            });
+        } else {
+            alert('⚠️ يجب الموافقة على الشروط أولاً!');
+        }
+    });
+</script>
+
+</body>
+</html>
